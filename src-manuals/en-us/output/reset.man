@@ -1,0 +1,3 @@
+Fully reset the currently recorded output information.
+
+@return void

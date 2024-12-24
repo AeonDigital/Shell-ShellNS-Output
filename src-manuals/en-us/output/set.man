@@ -1,0 +1,35 @@
+Stores information regarding the execution of a procedure or function, and
+also records dialog information that should be shown to the user.
+
+@param ?string $1
+::
+  - default : "-"
+::
+Name of the function performed.
+
+@param ?int $2
+::
+  - default : "0"
+::
+Function output status.
+If it is not an integer, it will use **1**.
+
+@param ?string $3...--dialog
+All parameters from this position onwards refer to values returned by the
+executed function.
+
+On receiving **--dialog** stops collecting values returned by the function
+and starts feeding the dialog message.
+
+@param option $4
+::
+  - default : "raw"
+  - list    : SHELLNS_DIALOG_DATA_TYPES
+::
+
+Dialogue type.
+
+@param ?string $5
+Message that will be shown.
+
+@return void
